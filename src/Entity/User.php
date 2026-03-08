@@ -17,7 +17,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private int $id = 0;
 
     #[ORM\Column(length: 180)]
     private string $email = '';
@@ -58,6 +58,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
+        if ('' === $this->email) {
+            throw new \LogicException('User email cannot be empty.');
+        }
+
         return $this->email;
     }
 
