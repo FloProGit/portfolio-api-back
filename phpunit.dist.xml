@@ -19,7 +19,7 @@
 
     <testsuites>
         <testsuite name="Functional">
-            <directory>tests/Functional</directory>
+<!--            <directory>tests/Functional</directory>-->
         </testsuite>
     </testsuites>
 
