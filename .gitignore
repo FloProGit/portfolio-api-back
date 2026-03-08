@@ -1,4 +1,5 @@
-
+.ddev
+.idea
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -17,4 +18,5 @@
 ###> symfony/asset-mapper ###
 /public/assets/
 /assets/vendor/
+.ddev
 ###< symfony/asset-mapper ###
